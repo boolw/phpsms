@@ -20,7 +20,9 @@ composer require boolw/phpsms:dev-master
 在config/phpsms.php中设置
 ```php
 'scheme' => [
-    'AlidayuSms'
+        'AlidayuSms'=>[
+		'agentClass'=>'Boolw\\Phpsms\\AlidayuSmsAgent',
+	],
 ];
 
 'agents' => [
@@ -32,7 +34,7 @@ composer require boolw/phpsms:dev-master
      * website:http://www.alidayu.com
      * support template sms.
      */
-    'AlidayuSms' => [
+    'Boolw\\Phpsms\\AlidayuSmsAgent' => [
         //请求地址
         'sendUrl'           => 'http://dysmsapi.aliyuncs.com/',
         //淘宝开放平台中，对应阿里大鱼短信应用的App Key
@@ -47,6 +49,14 @@ composer require boolw/phpsms:dev-master
     ],
 ]
 ```
+
+在config/laravel-sms.php中设置
+```php
+    'templates' => [
+        'Boolw\\Phpsms\\AlidayuSmsAgent'=>['SMS_86895115'],
+    ],
+```
+
 
 # License
 
