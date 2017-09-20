@@ -1,0 +1,18 @@
+{
+    "name": "boolw/phpsms",
+    "description": "基于toplan/phpsms开发，增加阿里大于新协议",
+    "license": "MIT",
+    "authors": [{
+        "name": "boolw",
+        "email": "boolw@boolw.com"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+        "toplan/laravel-sms": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Boolw\\PhpSms\\": ""
+        }
+    }
+}
